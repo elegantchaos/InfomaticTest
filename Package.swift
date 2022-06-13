@@ -27,7 +27,6 @@ let package = Package(
             name: "InfomaticTest",
             dependencies: [],
             resources: [
-                .process("Resources/Info.info")
             ],
             plugins: [
                 .plugin(name: "InfomaticPlugin", package: "InfomaticPlugin")

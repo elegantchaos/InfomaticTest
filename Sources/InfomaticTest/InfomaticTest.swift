@@ -8,15 +8,20 @@ import Foundation
 @main struct InfomaticTest {
     static func main() {
 
+        if let info = Bundle.module.infoDictionary {
+            print("Info dictionary is: \(info)")
+        }
+
         // access the bundled info.plist explicitly
-        guard let url = Bundle.module.url(forResource: "Info", withExtension: "plist") else {
-            fatalError("Info.plist not found.")
+        guard let url = Bundle.module.url(forResource: "Other", withExtension: "plist") else {
+            fatalError("Other.plist not found.")
         }
         
-        print("\nInfo.plist:")
+        print("\nOther.plist:")
         var format: PropertyListSerialization.PropertyListFormat = .xml
-        if let data = try? Data(contentsOf: url), let info = try? PropertyListSerialization.propertyList(from: data, format: &format) {
+        if let data = try? Data(contentsOf: url), let decoded = try? PropertyListSerialization.propertyList(from: data, format: &format), let info = decoded as? [String:Any] {
             print(info)
         }
+        
     }
 }
