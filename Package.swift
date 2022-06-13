@@ -19,8 +19,8 @@ let package = Package(
             targets: ["InfomaticTest"]),
     ],
     dependencies: [
-//        .package(url: "https://github.com/elegantchaos/InfomaticPlugin.git", branch: "main"),
-        .package(path: "../InfomaticPlugin")
+        .package(url: "https://github.com/elegantchaos/InfomaticPlugin.git", branch: "main"),
+//        .package(path: "../InfomaticPlugin")
     ],
     targets: [
         .executableTarget(
