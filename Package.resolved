@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "infomaticplugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/elegantchaos/InfomaticPlugin.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "735c0f1431f65977fcb3f808b74f6eeb728183ef"
+      }
+    }
+  ],
+  "version" : 2
+}
